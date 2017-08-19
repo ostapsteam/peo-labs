@@ -1,4 +1,4 @@
 include LICENSE
 include README.rst
-recursive-include peo/static *
-recursive-include peo/templates *
+recursive-include protos/static *
+recursive-include protos/templates *

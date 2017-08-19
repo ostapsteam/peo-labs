@@ -1,8 +1,0 @@
-LICENSE
-MANIFEST.in
-README.rst
-protos.egg-info/PKG-INFO
-protos.egg-info/SOURCES.txt
-protos.egg-info/dependency_links.txt
-protos.egg-info/requires.txt
-protos.egg-info/top_level.txt
