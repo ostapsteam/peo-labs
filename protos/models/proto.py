@@ -38,3 +38,6 @@ class Proto(models.Model):
 
 class GeoProto(geomodels.Model):
     point = geomodels.PointField()
+
+    class Meta:
+        abstract = True
