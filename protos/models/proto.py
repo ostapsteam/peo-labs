@@ -36,7 +36,7 @@ class Proto(models.Model):
         abstract = True
 
 
-class GeoProto(geomodels.Model):
+class GeoProto(Proto, geomodels.Model):
     point = geomodels.PointField()
 
     class Meta:
