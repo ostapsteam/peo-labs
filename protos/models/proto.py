@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.db.models import QuerySet
 from django.contrib.gis.db import models as geomodels
 
+
 class ProtoQuerySet(QuerySet):
     def delete(self):
         self.update(deleted_at=datetime.utcnow())
@@ -37,7 +38,7 @@ class Proto(models.Model):
 
 
 class GeoProto(Proto, geomodels.Model):
-    point = geomodels.PointField()
+    point = geomodels.PointField(srid=4326)
 
     class Meta:
         abstract = True
