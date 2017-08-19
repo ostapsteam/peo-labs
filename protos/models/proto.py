@@ -1,10 +1,9 @@
 from datetime import datetime
 from django.contrib.auth.models import User
-from django.db.models import QuerySet
 from django.contrib.gis.db import models as gismodels
 
 
-class ProtoQuerySet(QuerySet):
+class ProtoQuerySet(gismodels.QuerySet):
     def delete(self):
         self.update(deleted_at=datetime.utcnow())
 
