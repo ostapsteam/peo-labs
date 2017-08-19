@@ -2,7 +2,7 @@ from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
 from django.db.models import QuerySet
-
+from django.contrib.gis.db import models as geomodels
 
 class ProtoQuerySet(QuerySet):
     def delete(self):
@@ -34,3 +34,7 @@ class Proto(models.Model):
 
     class Meta:
         abstract = True
+
+
+class GeoProto(geomodels.Model):
+    point = geomodels.PointField()
