@@ -1,0 +1,15 @@
+language: python
+python:
+- '3.6'
+install: python setup.py install
+script: nosetests
+deploy:
+  provider: pypi
+  user: ostapsteam
+  server: https://test.pypi.org/legacy/
+  password:
+    secure: Zn3BcU9FN//pNBJe5EbP11n000NvEERig5X/t6YBPVra5HGv5rCBZ4Si8oGSDYN+lltkyM7Iq37QEr4uMkZd0RypY1sB5CQPK02hW8t6bT1+oMm4o7mTvCI8E3LnHRLZGNqHEcHyVH6aCmbo+kvzNBknWb6nh6ugeg4aZtN4sYNrXCvbRgzEPtsSi8YsPIADP6INsj0geXEV/N2SW/oSUNmjikz1OZx3BQoBAaLlOLbxJXZXBNrGYTOiRYpv2/YQWsrijM+qWaMyxZq394y5ZIZSXWVzubgc6x0PRG0U0b4DDXsYU2bUVG671Jl9id4C+wcaaC152Drthiynd8jtLjufJdt6fbb2kcw32qsVeqp80pQiyHBpfUiklxNW7xLMB0daRMCAiwuvRKtRPn6TMXZnLLWV0RfUEIM/SZXlEWqs8vtnbwLIculOMEbg0KcvrM1glwuZ2aPK+DwFBlGsaONowUrQmmCIPV6fMvXniNpW8H54qH9LxR88A4mvlCql8YKf2Rp6cta+ZQkpysIkPzSEWy3rP74IO8+ZOpQi6NdHbR9PAaKbcDuqYI3/v1G5k3IupwY0S2HNa9rEbI7CpdYnYrfwjwt1p8/CDAdVNaN0Ct+CDUefdynE9Gf+glP5eVOifIDgyTo2ExQgF0bT94mzBXWUOoEQBEJzUc2Ajew=
+  on:
+    distributions: sdist bdist_wheel
+    repo: ostapsteam/protos
+    branch: master
